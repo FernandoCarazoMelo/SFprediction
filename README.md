@@ -2,7 +2,7 @@ TUTORIAL. Integration of CLIP experiments of RNA-binding proteins: a novel appro
 ================
 Fernando Carazo, Marian Gimeno, Juan A. Ferrer-Bonsoms and Angel Rubio
 
-*Tecnun (University of Navarra), Paseo Manuel LardizÃ¡bal 15, 20018 San SebastiÃ¡n, SPAIN*
+*Tecnun (University of Navarra), Paseo Manuel Lardizábal 15, 20018 San Sebastián, SPAIN*
 
 <br />
 
@@ -263,7 +263,7 @@ if(Method_PSI_stat == "Eventpointer"){
     ##  Analysis Finished
     ##  Done 
     ## 
-    ##  5:40:52 PM  Analysis Completed
+    ##  6:36:41 PM  Analysis Completed
 
 ``` r
 rownames(Dmatrix) <- colnames(PSI)
@@ -537,7 +537,7 @@ for(c in 1:ncol(Cmatrix)){
     P2 <- (ggmatplot(ExpEvs[[iEv]][, c(1), drop = F] / ExpEvs[[iEv]][, c(3)]) +
              geom_vline(xintercept = pos, linetype="dotted") +
              ylab("PSI") +
-             ggtitle(label = sprintf("PSI Event Top %s: %s",iEv, evName), subtitle = sprintf("Contrast: %s | Statistic %s: %s", colnames(Cmatrix)[c], Method_PSI_stat, EP_method)) +
+             ggtitle(label = sprintf("PSI Event Top %s: %s",ev, evName), subtitle = sprintf("Contrast: %s | Statistic %s: %s", colnames(Cmatrix)[c], Method_PSI_stat, EP_method)) +
              geom_text(data = df, mapping = aes(x = Pos, y = 0, label = Cond), col = "black", size=3.3, angle=90, vjust=-0.4, hjust=0, inherit.aes = FALSE))
     
     print(P1)
